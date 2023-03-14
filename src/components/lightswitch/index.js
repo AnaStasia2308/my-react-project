@@ -11,6 +11,7 @@ function LightSwitch(){
   			<button onClick={buttonClick}>On</button>
   			<LightBulb lightIsOn={lightIsOn} />
 		</>
+		
 	)
 }
 

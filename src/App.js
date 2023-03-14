@@ -9,6 +9,7 @@ function App() {
       <LightSwitch />
       <LightSwitch />
       <LightSwitch />
+      
     </div>
   );
 }
