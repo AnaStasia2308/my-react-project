@@ -7,6 +7,5 @@ function LihgtBulb(props){
   			<img className="lightbulb" src={img1}/>
 		</>
 	)
-	
 }
 export default LihgtBulb
