@@ -1,14 +1,19 @@
 import LightSwitch from './components/lightswitch';
-import LightBulb from './components/lightbulb';
-import logo from './logo.svg';
+import MasterSwitch from './components/masterswitch';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [isMasterSwitchOn, setMasterSwitchOn] = useState(false)
   return (
     <div className="App">
-      <LightSwitch />
-      <LightSwitch />
-      <LightSwitch />
+      <div>
+      <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
+      <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
+      <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
+    </div>
+    <p></p>
+    <MasterSwitch isMasterSwitchOn={isMasterSwitchOn} setMasterSwitchOn={setMasterSwitchOn} />
     </div>
   );
 }
