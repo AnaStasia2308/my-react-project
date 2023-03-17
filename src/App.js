@@ -1,6 +1,8 @@
 import LightSwitch from './components/lightswitch';
 import LightBulb from './components/lightbulb';
-import logo from './logo.svg';
+import React from 'react';
+import {useState} from 'react';
+import MasterSwitchClicked from './components/switchclicked';
 import './App.css';
 
 function App() {
@@ -9,9 +11,10 @@ function App() {
       <LightSwitch />
       <LightSwitch />
       <LightSwitch />
-      
+      <p />
+      <MasterSwitchClicked />
     </div>
-  );
-}
+    );
+  }
 
-export default App;
+  export default App;

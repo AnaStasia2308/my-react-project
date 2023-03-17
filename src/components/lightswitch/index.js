@@ -6,13 +6,14 @@ function LightSwitch(){
 	function buttonClick(){
 		setLightIsOn(!lightIsOn)   
 	}
-	return( 
-		<>
+	return(
+		<div>
+  			<LightBulb lightIsOn={lightIsOn} isMasterSwitchOn={props.isMasterSwitchOn}/>
+  			<p />
   			<button onClick={buttonClick}>On</button>
-  			<LightBulb lightIsOn={lightIsOn} />
-		</>
-		
+		</div>
 	)
 }
 
 export default LightSwitch
+
