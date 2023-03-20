@@ -1,5 +1,8 @@
 import LightSwitch from './components/lightswitch';
 import MasterSwitch from './components/masterswitch';
+import LightBulb from './components/lightbulb';
+import React from 'react';
+import {useState} from 'react';
 import './App.css';
 import { useState } from 'react';
 
@@ -14,8 +17,12 @@ function App() {
     </div>
     <p></p>
     <MasterSwitch isMasterSwitchOn={isMasterSwitchOn} setMasterSwitchOn={setMasterSwitchOn} />
+      <LightSwitch />
+      <LightSwitch />
+      <LightSwitch />
+      <p />
     </div>
-  );
-}
+    );
+  }
 
-export default App;
+  export default App;
