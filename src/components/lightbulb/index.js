@@ -1,11 +1,13 @@
 import './index.css'
 
-function LihgtBulb(props){
-	const img1 = (props.isMasterSwitchOn || props.lightIsOn) ? 'light_on.png' : 'light_off.jpg'
+function LightBulb(props){
+	const lightIsOn= (props.isMasterSwitchOn || props.lightIsOn)
+	const img1 = lightIsOn ? 'light_on.png' : 'light_off.jpg'
+	const alt = lightIsOn ? 'light on' : 'light off'
 	return( 
 		<>
-  			<img className="lightbulb" src={img1}/>
+  			<img className="lightbulb" src={img1} alt={alt}/>
 		</>
 	)
 }
-export default LihgtBulb
+export default LightBulb
