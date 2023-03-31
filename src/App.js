@@ -7,18 +7,16 @@ import './App.css';
 
 function App() {
   return (
-    <AnotherContext>
-      <MasterControl>
-        <div className="App">
-          <div>
-            <LightSwitch />
-            <LightSwitch />
-            <LightSwitch />
-          </div>
-          <MasterSwitch />
+    <MasterControl>
+      <div className="App">
+        <div>
+          <LightSwitch />
+          <LightSwitch />
+          <LightSwitch />
         </div>
-      </MasterControl>
-    </AnotherContext>
+        <MasterSwitch />
+      </div>
+    </MasterControl>
   );
 }
 
