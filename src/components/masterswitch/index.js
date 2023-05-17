@@ -1,13 +1,15 @@
+import { useMasterControl } from '../../context/master-control'
 import './index.css'
 
-function MasterSwitch(props){
+function MasterSwitch(){
+  const { setIsMasterSwitchOn, isMasterSwitchOn } = useMasterControl()
   function masterSwitchClicked(){
-    props.setMasterSwitchOn(!props.isMasterSwitchOn)   
+    setIsMasterSwitchOn(!isMasterSwitchOn)   
   }
   return(
-    <div>
-    <button className="masterSwitch" onClick={masterSwitchClicked}>Master Switch</button>
-    </div>
+    <button className="masterSwitch" onClick={masterSwitchClicked}>
+      Master Switch
+    </button>
   )
 }
 

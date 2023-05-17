@@ -1,21 +1,22 @@
 import LightSwitch from './components/lightswitch';
 import MasterSwitch from './components/masterswitch';
 import React from 'react';
-import { useState } from 'react';
+import MasterControl from './context/master-control'
 import './App.css';
 
 
 function App() {
-  const [isMasterSwitchOn, setMasterSwitchOn] = useState(false)
   return (
-    <div className="App">
-      <div>
-        <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
-        <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
-        <LightSwitch isMasterSwitchOn={isMasterSwitchOn} />
+    <MasterControl>
+      <div className="App">
+        <div>
+          <LightSwitch />
+          <LightSwitch />
+          <LightSwitch />
+        </div>
+        <MasterSwitch />
       </div>
-      <MasterSwitch isMasterSwitchOn={isMasterSwitchOn} setMasterSwitchOn={setMasterSwitchOn} />
-    </div>
+    </MasterControl>
   );
 }
 

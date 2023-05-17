@@ -1,7 +1,9 @@
+import { useMasterControl } from '../../context/master-control'
 import './index.css'
 
 function LightBulb(props){
-	const lightIsOn= (props.isMasterSwitchOn || props.lightIsOn)
+	const { isMasterSwitchOn } = useMasterControl()
+	const lightIsOn= (isMasterSwitchOn || props.lightIsOn)
 	const img1 = lightIsOn ? 'light_on.png' : 'light_off.jpg'
 	const alt = lightIsOn ? 'light on' : 'light off'
 	return( 
